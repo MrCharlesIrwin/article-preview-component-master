@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <img src="images/drawers.jpg" alt="" />
+      <article>
+        <h1>
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+        <p>
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I've got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <sectrion class="hide">
+          <img src="images/avatar-michelle.jpg" alt="" />
+
+          <p><b>Michelle Appleton</b> 28 Jun 2020</p>
+
+          <button class="shareButton" onclick="showOrHideDiv()">
+            <div class="showbg">
+              <em>Share</em>
+              <img src="../images/icon-facebook.svg" alt="" />
+              <img src="../images/icon-twitter.svg" alt="" />
+              <img src="../images/icon-pinterest.svg" alt="" />
+            </div>
+          </button>
+        </sectrion>
+      </article>
+      <section class="show">
+        <em>Share</em>
+        <img src="../images/icon-facebook.svg" alt="" />
+        <img src="../images/icon-twitter.svg" alt="" />
+        <img src="../images/icon-pinterest.svg" alt="" />
+        <button class="shareButton" onclick="showOrHideDiv()"></button>
+      </section>
+    </main>
+  </body>
+</html>

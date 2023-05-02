@@ -1,0 +1,166 @@
+$primary-100: hsl(210, 46%, 95%);
+$primary-200: hsl(212, 23%, 69%);
+$primary-300: hsl(214, 17%, 51%);
+$primary-400: hsl(217, 19%, 35%);
+
+h1 {
+  margin: 0 auto 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: $primary-400;
+}
+b {
+  color: $primary-400;
+}
+article {
+  padding: 1.9rem;
+}
+img {
+  height: 210px;
+  width: 100%;
+}
+p {
+  line-height: 1.65;
+}
+body {
+  background-color: $primary-100;
+  color: $primary-300;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 325px;
+  display: flex;
+  flex-direction: column;
+}
+.hide {
+  $imgSize: 2.6rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  img {
+    border-radius: 50%;
+    height: $imgSize;
+    width: $imgSize;
+  }
+  b {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+    display: block;
+  }
+}
+.show {
+  margin-top: -1.9rem;
+  background-color: $primary-400;
+  padding: 1.3rem 1.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+
+  em {
+    font-size: 0.9rem;
+    color: $primary-200;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+  }
+  img {
+    $imgSize: 1rem;
+    height: $imgSize;
+    width: $imgSize;
+  }
+  .shareButton {
+    background-color: $primary-200;
+  }
+}
+
+.shareButton {
+  $buttonSize: 1.8rem;
+  position: relative;
+
+  background: url("../images/icon-share.svg") no-repeat;
+  background-position: center;
+  background-color: hsla(0, 0%, 50%, 0.185);
+
+  border-radius: 50%;
+  border: none;
+  height: $buttonSize;
+  width: $buttonSize;
+  margin-left: auto;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.showbg {
+  border-radius: 13px;
+  width: fit-content;
+  transform: translate(-46%, -100%);
+  position: relative;
+  isolation: isolate;
+  margin-top: -1.9rem;
+  background-color: $primary-400;
+  padding: 1.3rem 1.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+
+  em {
+    font-size: 0.9rem;
+    color: $primary-200;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+  }
+  img {
+    $imgSize: 1.1rem;
+    border-radius: initial;
+    height: $imgSize;
+    width: $imgSize;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $primary-400;
+    top: 0;
+    left: auto;
+    right: auto;
+    width: 130px;
+    height: 73px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    z-index: -1;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  body {
+    height: 95vh;
+  }
+
+  main {
+    overflow: visible;
+    flex-direction: row;
+    height: 300px;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      height: 100%;
+      border-radius: 12px 0 0 12px;
+    }
+  }
+}
